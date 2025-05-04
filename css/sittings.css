@@ -1,0 +1,271 @@
+.settings-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.settings-nav {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.settings-content {
+    flex-grow: 1;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4a89dc;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+.btn-save {
+    background-color: #4a89dc;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-save:hover {
+    background-color: #3a70c2;
+}
+
+.btn-cancel {
+    background-color: #f5f7fa;
+    color: #666;
+    border: 1px solid #ddd;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+    background-color: #e6e9ed;
+}
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.users-table th,
+.users-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.users-table th {
+    background-color: #f5f7fa;
+    font-weight: 500;
+    color: #555;
+}
+
+.users-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.status.active {
+    color: #42b983;
+    background-color: rgba(66,185,131,0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.status.inactive {
+    color: #f56c6c;
+    background-color: rgba(245,108,108,0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+.settings-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.settings-nav li {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.settings-nav li:hover {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.settings-nav li.active {
+    background-color: #4a89dc;
+    color: white;
+}
+
+.settings-nav li i {
+    width: 20px;
+    text-align: center;
+}
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file-upload .current-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.btn-upload {
+    background-color: #f5f7fa;
+    color: #666;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-upload:hover {
+    background-color: #e6e9ed;
+}
+
+input[type="file"] {
+    display: none;
+}
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group label, .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4a89dc;
+}
+.maintenance-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.maintenance-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.maintenance-card h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #333;
+}
+
+.backup-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.backup-history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.backup-history li:last-child {
+    border-bottom: none;
+}
+@media (max-width: 768px) {
+    .settings-container {
+        flex-direction: column;
+    }
+    
+    .settings-nav {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+    
+    .settings-nav ul {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .settings-nav li {
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

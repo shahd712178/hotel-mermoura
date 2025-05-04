@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mermoura - Rooms Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rooms.css">
+    <link rel="icon" href="images/Logo.jfif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" >
+</head>
+<body>
+    <div class="admin-container">
+        <
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/Logo.jfif" alt="Hotel Mermoura Logo" class="logo">
+                <h2>Hotel Mermoura</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="rooms.html">
+                            <i class="fas fa-bed"></i>
+                            <span>Rooms Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clients.html">
+                            <i class="fas fa-users"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Rooms Management</h1>
+                </div>
+                <div class="navbar-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="ri-user-fill"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Rooms Content -->
+            <div class="content-wrapper">
+                <!-- Rooms Header with Add Button -->
+                <div class="rooms-header">
+                    <h2>All Rooms</h2>
+                    <button class="btn-add-room" id="addRoomBtn">
+                        <i class="fas fa-plus"></i> Add New Room
+                    </button>
+                </div>
+
+                <!-- Rooms Table -->
+                <div class="rooms-table-container">
+                    <table class="rooms-table">
+                        <thead>
+                            <tr>
+                                <th>Room ID</th>
+                               
+                                <th>Room Type</th>
+                                <th>Price/Night</th>
+                                <th>Size</th>
+                                <th>Capacity</th>
+                                <th>Availability</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RM-101</td>
+                        
+                                <td>Single Room</td>
+                                <td>17,900 DZD</td>
+                                <td>60 m²</td>
+                                <td>1-2</td>
+                                <td><span class="status available">Available</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RM-102</td>
+                                
+                                <td>Double Room</td>
+                                <td>19,900 DZD</td>
+                                <td>60 m²</td>
+                                <td>1-2</td>
+                                <td><span class="status available">Available</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RM-201</td>
+                                
+                                <td>Junior-Single</td>
+                                <td>24,900 DZD</td>
+                                <td>60 m²</td>
+                                <td>1-2</td>
+                                <td><span class="status booked">Booked</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RM-202</td>
+                                
+                                <td>Junior-Double</td>
+                                <td>29,900 DZD</td>
+                                <td>60 m²</td>
+                                <td>1-2</td>
+                                <td><span class="status available">Available</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RM-301</td>
+                               
+                                <td>Apart-Single</td>
+                                <td>39,900 DZD</td>
+                                <td>60 m²</td>
+                                <td>1-2</td>
+                                <td><span class="status maintenance">Maintenance</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RM-302</td>
+                                
+                                <td>Apart-Double</td>
+                                <td>49,900 DZD</td>
+                                <td>60 m²</td>
+                                <td>1-2</td>
+                                <td><span class="status available">Available</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="btn-pagination" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn-pagination active">1</button>
+                    <button class="btn-pagination">2</button>
+                    <button class="btn-pagination">3</button>
+                    <button class="btn-pagination">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Room Modal -->
+    <div class="modal" id="roomModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Room</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="roomForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="roomType">Room Type</label>
+                            <select id="roomType" name="roomType" required>
+                                <option value="">Select Room Type</option>
+                                <option value="Single">Single Room</option>
+                                <option value="Double">Double Room</option>
+                                <option value="Junior-Single">Junior-Single</option>
+                                <option value="Junior-Double">Junior-Double</option>
+                                <option value="Apart-Single">Apart-Single</option>
+                                <option value="Apart-Double">Apart-Double</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="roomNumber">Room Number</label>
+                            <input type="text" id="roomNumber" name="roomNumber" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Price per Night (DZD)</label>
+                            <input type="number" id="price" name="price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="size">Size (m²)</label>
+                            <input type="number" id="size" name="size" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="capacity">Capacity</label>
+                            <input type="number" id="capacity" name="capacity" min="1" max="4" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="availability">Availability</label>
+                            <select id="availability" name="availability" required>
+                                <option value="available">Available</option>
+                                <option value="booked">Booked</option>
+                                <option value="maintenance">Maintenance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomImage">Room Image</label>
+                        <input type="file" id="roomImage" name="roomImage" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Amenities</label>
+                        <div class="amenities-checkboxes">
+                            <label><input type="checkbox" name="amenities" value="wifi"> Wi-Fi</label>
+                            <label><input type="checkbox" name="amenities" value="breakfast"> Breakfast</label>
+                            <label><input type="checkbox" name="amenities" value="pool"> Pool Access</label>
+                            <label><input type="checkbox" name="amenities" value="tv"> TV</label>
+                            <label><input type="checkbox" name="amenities" value="ac"> Air Conditioning</label>
+                            <label><input type="checkbox" name="amenities" value="safe"> Safe</label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="cancelRoomBtn">Cancel</button>
+                        <button type="submit" class="btn-save">Save Room</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+</body>
+</html>

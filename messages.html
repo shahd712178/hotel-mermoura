@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mermoura - Messages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <link rel="icon" href="images/Logo.jfif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" >
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/Logo.jfif" alt="Hotel Mermoura Logo" class="logo">
+                <h2>Hotel Mermoura</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rooms.html">
+                            <i class="fas fa-bed"></i>
+                            <span>Rooms Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clients.html">
+                            <i class="fas fa-users"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Messages & Inquiries</h1>
+                </div>
+                <div class="navbar-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="ri-user-fill"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Messages Content -->
+            <div class="content-wrapper">
+                <!-- Messages Header with Filters -->
+                <div class="messages-header">
+                    <h2>All Messages</h2>
+                    <div class="messages-filters">
+                        <div class="filter-group">
+                            <label for="messageStatus">Status:</label>
+                            <select id="messageStatus">
+                                <option value="all">All Messages</option>
+                                <option value="unread">Unread</option>
+                                <option value="read">Read</option>
+                                <option value="replied">Replied</option>
+                                <option value="archived">Archived</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="messageType">Type:</label>
+                            <select id="messageType">
+                                <option value="all">All Types</option>
+                                <option value="booking">Booking Inquiry</option>
+                                <option value="general">General Question</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search messages..." id="messageSearch">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages List -->
+                <div class="messages-list-container">
+                    <div class="messages-list">
+                        <!-- Message Item -->
+                        <div class="message-item unread">
+                            <div class="message-checkbox">
+                                <input type="checkbox" id="msg1">
+                            </div>
+                            <div class="message-sender">
+                                <div class="sender-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
+                                </div>
+                                <div class="sender-info">
+                                    <h3>John Doe</h3>
+                                    <p>john.doe@example.com</p>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <h3>Booking inquiry for December</h3>
+                                <p>Hello, I would like to inquire about availability for a double room from December 15-20...</p>
+                            </div>
+                            <div class="message-meta">
+                                <span class="message-type booking">Booking</span>
+                                <span class="message-date">Today, 10:30 AM</span>
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn-mark-read"><i class="fas fa-envelope-open"></i></button>
+                                <button class="btn-reply"><i class="fas fa-reply"></i></button>
+                                <button class="btn-archive"><i class="fas fa-archive"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Message Item -->
+                        <div class="message-item read">
+                            <div class="message-checkbox">
+                                <input type="checkbox" id="msg2">
+                            </div>
+                            <div class="message-sender">
+                                <div class="sender-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith">
+                                </div>
+                                <div class="sender-info">
+                                    <h3>Jane Smith</h3>
+                                    <p>jane.smith@example.com</p>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <h3>Special dietary requirements</h3>
+                                <p>I have a reservation for next week and wanted to inform you about my gluten allergy...</p>
+                            </div>
+                            <div class="message-meta">
+                                <span class="message-type general">General</span>
+                                <span class="message-date">Yesterday, 3:45 PM</span>
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn-mark-read"><i class="fas fa-envelope-open"></i></button>
+                                <button class="btn-reply"><i class="fas fa-reply"></i></button>
+                                <button class="btn-archive"><i class="fas fa-archive"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Message Item -->
+                        <div class="message-item replied">
+                            <div class="message-checkbox">
+                                <input type="checkbox" id="msg3">
+                            </div>
+                            <div class="message-sender">
+                                <div class="sender-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Robert Johnson">
+                                </div>
+                                <div class="sender-info">
+                                    <h3>Robert Johnson</h3>
+                                    <p>robert.j@example.com</p>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <h3>Complaint about room service</h3>
+                                <p>During my stay last week, I experienced unacceptable delays with room service...</p>
+                            </div>
+                            <div class="message-meta">
+                                <span class="message-type complaint">Complaint</span>
+                                <span class="message-date">Nov 12, 2023</span>
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn-mark-read"><i class="fas fa-envelope-open"></i></button>
+                                <button class="btn-reply"><i class="fas fa-reply"></i></button>
+                                <button class="btn-archive"><i class="fas fa-archive"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Message Item -->
+                        <div class="message-item read">
+                            <div class="message-checkbox">
+                                <input type="checkbox" id="msg4">
+                            </div>
+                            <div class="message-sender">
+                                <div class="sender-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Sarah Williams">
+                                </div>
+                                <div class="sender-info">
+                                    <h3>Sarah Williams</h3>
+                                    <p>sarah.w@example.com</p>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <h3>Wonderful stay!</h3>
+                                <p>I just wanted to thank you for the excellent service during our recent stay. The staff was...</p>
+                            </div>
+                            <div class="message-meta">
+                                <span class="message-type feedback">Feedback</span>
+                                <span class="message-date">Nov 5, 2023</span>
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn-mark-read"><i class="fas fa-envelope-open"></i></button>
+                                <button class="btn-reply"><i class="fas fa-reply"></i></button>
+                                <button class="btn-archive"><i class="fas fa-archive"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Message Item -->
+                        <div class="message-item archived">
+                            <div class="message-checkbox">
+                                <input type="checkbox" id="msg5">
+                            </div>
+                            <div class="message-sender">
+                                <div class="sender-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Michael Brown">
+                                </div>
+                                <div class="sender-info">
+                                    <h3>Michael Brown</h3>
+                                    <p>michael.b@example.com</p>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <h3>Conference facilities inquiry</h3>
+                                <p>Our company is planning a small conference in Guelma next month and we're interested in...</p>
+                            </div>
+                            <div class="message-meta">
+                                <span class="message-type booking">Booking</span>
+                                <span class="message-date">Oct 28, 2023</span>
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn-mark-read"><i class="fas fa-envelope-open"></i></button>
+                                <button class="btn-reply"><i class="fas fa-reply"></i></button>
+                                <button class="btn-archive"><i class="fas fa-archive"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bulk Actions -->
+                    <div class="bulk-actions">
+                        <div class="bulk-select">
+                            <input type="checkbox" id="selectAllMessages">
+                            <label for="selectAllMessages">Select All</label>
+                        </div>
+                        <div class="bulk-buttons">
+                            <button class="btn-mark-read-bulk"><i class="fas fa-envelope-open"></i> Mark as Read</button>
+                            <button class="btn-archive-bulk"><i class="fas fa-archive"></i> Archive</button>
+                            <button class="btn-delete-bulk"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="btn-pagination" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn-pagination active">1</button>
+                        <button class="btn-pagination">2</button>
+                        <button class="btn-pagination">3</button>
+                        <button class="btn-pagination">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Message Detail Modal -->
+    <div class="modal" id="messageDetailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="messageModalTitle">Message Details</h3>
+                <button class="modal-close" id="closeMessageModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="message-header">
+                    <div class="sender-avatar-large">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sender" id="detailSenderAvatar">
+                    </div>
+                    <div class="sender-details">
+                        <h2 id="detailSenderName">John Doe</h2>
+                        <p id="detailSenderEmail">john.doe@example.com</p>
+                        <div class="message-meta-details">
+                            <span class="message-type-detail booking" id="detailMessageType">Booking Inquiry</span>
+                            <span class="message-date-detail" id="detailMessageDate">Today, 10:30 AM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="message-content">
+                    <h3 id="detailMessageSubject">Booking inquiry for December</h3>
+                    <div class="message-body" id="detailMessageBody">
+                        <p>Hello,</p>
+                        <p>I would like to inquire about availability for a double room from December 15-20. We are a family of three (two adults and one child).</p>
+                        <p>Could you please let me know:</p>
+                        <ul>
+                            <li>Availability for those dates</li>
+                            <li>Current rates including breakfast</li>
+                            <li>Any special offers for longer stays</li>
+                        </ul>
+                        <p>Also, we would need an extra bed for our child. Is this possible and what would be the additional cost?</p>
+                        <p>Looking forward to your reply.</p>
+                        <p>Best regards,<br>John Doe</p>
+                    </div>
+                </div>
+                
+                <div class="message-actions-detail">
+                    <button class="btn-reply-detail" id="replyMessageBtn"><i class="fas fa-reply"></i> Reply</button>
+                    <button class="btn-forward-detail" id="forwardMessageBtn"><i class="fas fa-share"></i> Forward</button>
+                    <button class="btn-print-detail" id="printMessageBtn"><i class="fas fa-print"></i> Print</button>
+                </div>
+                
+                <div class="reply-section">
+                    <h4>Reply to Message</h4>
+                    <form id="replyForm">
+                        <div class="form-group">
+                            <textarea id="replyMessage" name="replyMessage" rows="5" placeholder="Type your reply here..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-cancel" id="cancelReplyBtn">Cancel</button>
+                            <button type="submit" class="btn-send-reply">Send Reply</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/messages.js"></script>
+</body>
+</html>

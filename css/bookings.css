@@ -1,0 +1,295 @@
+/* bookings.css - Bookings Management Page Styles */
+
+/* Bookings Header */
+.bookings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bookings-header h2 {
+    font-size: 24px;
+    color: var(--dark-color);
+}
+
+.view-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-view {
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.btn-view i {
+    margin-right: 8px;
+}
+
+.btn-view:hover {
+    background-color: #e9ecef;
+}
+
+.btn-view.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Calendar View */
+.calendar-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#bookingCalendar {
+    height: 600px;
+}
+
+/* FullCalendar Overrides */
+.fc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fc-header-toolbar {
+    margin-bottom: 1em;
+}
+
+.fc-toolbar-title {
+    font-size: 1.2em;
+    color: var(--dark-color);
+}
+
+.fc-button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.fc-button:hover {
+    background-color: #1a252f;
+    border-color: #1a252f;
+}
+
+.fc-button-primary:not(:disabled).fc-button-active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.fc-event {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.fc-event:hover {
+    opacity: 0.9;
+}
+
+/* List View */
+.list-container {
+    display: none;
+}
+
+.bookings-table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+    transform: translate(10%,50%);
+}
+
+.bookings-table th {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.bookings-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status.confirmed {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+}
+
+.status.pending {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #f39c12;
+}
+
+.status.completed {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #2980b9;
+}
+
+.status.cancelled {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-edit {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.btn-edit:hover {
+    background-color: rgba(52, 152, 219, 0.2);
+}
+
+.btn-delete {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+/* Booking Detail Modal */
+.booking-details {
+    margin-bottom: 20px;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #2c3e50;
+    width: 150px;
+}
+
+.detail-value {
+    flex: 1;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    justify-content: flex-end;
+}
+
+.btn-confirm, .btn-cancel-booking, .btn-print {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-confirm {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #27ae60;
+}
+
+.btn-cancel-booking {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-cancel-booking:hover {
+    background-color: #c0392b;
+}
+
+.btn-print {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-print:hover {
+    background-color: #1a252f;
+}
+
+/* Edit Booking Modal */
+#editBookingModal .form-group {
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bookings-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .view-toggle {
+        width: 100%;
+    }
+    
+    .btn-view {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .booking-actions {
+        flex-direction: column;
+    }
+    
+    .btn-confirm, .btn-cancel-booking, .btn-print {
+        width: 100%;
+    }
+}

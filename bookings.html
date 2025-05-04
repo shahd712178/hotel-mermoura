@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mermoura - Bookings Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bookings.css">
+    <link rel="icon" href="images/Logo.jfif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" >
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/Logo.jfif" alt="Hotel Mermoura Logo" class="logo">
+                <h2>Hotel Mermoura</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rooms.html">
+                            <i class="fas fa-bed"></i>
+                            <span>Rooms Management</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clients.html">
+                            <i class="fas fa-users"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Bookings Management</h1>
+                </div>
+                <div class="navbar-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="ri-user-fill"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Bookings Content -->
+            <div class="content-wrapper">
+                <!-- Bookings Header with View Toggle -->
+
+                <div class="bookings-header">
+                    <h2>Manage Bookings</h2>
+                    <div class="view-toggle">
+                        <button class="btn-view active" id="calendarViewBtn">
+                            <i class="fas fa-calendar-alt"></i> Calendar View
+                        </button>
+                        <button class="btn-view" id="listViewBtn">
+                            <i class="fas fa-list"></i> List View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Calendar View -->
+                <div class="calendar-container" id="calendarContainer">
+                    <div id="bookingCalendar"></div>
+                </div>
+
+                <!-- List View (Hidden by default) -->
+                <div class="list-container" id="listContainer" style="display: none;">
+                    <div class="bookings-table-container">
+                        <table class="bookings-table">
+                            <thead>
+                                <tr>
+                                    <th>Booking ID</th>
+                                    <th>Guest</th>
+                                    <th>Room</th>
+                                    <th>Check-In</th>
+                                    <th>Check-Out</th>
+                                    <th>Nights</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#BK-1001</td>
+                                    <td>John Doe</td>
+                                    <td>Junior-Single (RM-201)</td>
+                                    <td>2023-11-15</td>
+                                    <td>2023-11-18</td>
+                                    <td>3</td>
+                                    <td>74,700 DZD</td>
+                                    <td><span class="status confirmed">Confirmed</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK-1002</td>
+                                    <td>Jane Smith</td>
+                                    <td>Apart-Double (RM-302)</td>
+                                    <td>2023-11-20</td>
+                                    <td>2023-11-25</td>
+                                    <td>5</td>
+                                    <td>249,500 DZD</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK-1003</td>
+                                    <td>Robert Johnson</td>
+                                    <td>Single Room (RM-101)</td>
+                                    <td>2023-11-10</td>
+                                    <td>2023-11-12</td>
+                                    <td>2</td>
+                                    <td>35,800 DZD</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK-1004</td>
+                                    <td>Sarah Williams</td>
+                                    <td>Double Room (RM-102)</td>
+                                    <td>2023-12-05</td>
+                                    <td>2023-12-10</td>
+                                    <td>5</td>
+                                    <td>99,500 DZD</td>
+                                    <td><span class="status confirmed">Confirmed</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK-1005</td>
+                                    <td>Michael Brown</td>
+                                    <td>Junior-Double (RM-202)</td>
+                                    <td>2023-12-15</td>
+                                    <td>2023-12-20</td>
+                                    <td>5</td>
+                                    <td>149,500 DZD</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="btn-pagination" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn-pagination active">1</button>
+                        <button class="btn-pagination">2</button>
+                        <button class="btn-pagination">3</button>
+                        <button class="btn-pagination">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Booking Detail Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="bookingModalTitle">Booking Details</h3>
+                <button class="modal-close" id="closeBookingModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="booking-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Booking ID:</span>
+                        <span class="detail-value" id="bookingId">#BK-1001</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Guest Name:</span>
+                        <span class="detail-value" id="guestName">John Doe</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Room:</span>
+                        <span class="detail-value" id="roomInfo">Junior-Single (RM-201)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Check-In:</span>
+                        <span class="detail-value" id="checkInDate">2023-11-15</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Check-Out:</span>
+                        <span class="detail-value" id="checkOutDate">2023-11-18</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Nights:</span>
+                        <span class="detail-value" id="nights">3</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Total Price:</span>
+                        <span class="detail-value" id="totalPrice">74,700 DZD</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Status:</span>
+                        <span class="detail-value"><span class="status confirmed" id="bookingStatus">Confirmed</span></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Special Requests:</span>
+                        <span class="detail-value" id="specialRequests">Early check-in requested if possible.</span>
+                    </div>
+                </div>
+                <div class="booking-actions">
+                    <button class="btn-confirm" id="confirmBookingBtn">Confirm Booking</button>
+                    <button class="btn-cancel-booking" id="cancelBookingBtn">Cancel Booking</button>
+                    <button class="btn-print" id="printBookingBtn">Print Invoice</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Booking Modal -->
+    <div class="modal" id="editBookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="editBookingModalTitle">Add New Booking</h3>
+                <button class="modal-close" id="closeEditBookingModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingGuest">Guest</label>
+                            <select id="bookingGuest" name="bookingGuest" required>
+                                <option value="">Select Guest</option>
+                                <option value="1">John Doe</option>
+                                <option value="2">Jane Smith</option>
+                                <option value="3">Robert Johnson</option>
+                                <option value="4">Sarah Williams</option>
+                                <option value="5">Michael Brown</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingRoom">Room</label>
+                            <select id="bookingRoom" name="bookingRoom" required>
+                                <option value="">Select Room</option>
+                                <option value="RM-101">Single Room (RM-101)</option>
+                                <option value="RM-102">Double Room (RM-102)</option>
+                                <option value="RM-201">Junior-Single (RM-201)</option>
+                                <option value="RM-202">Junior-Double (RM-202)</option>
+                                <option value="RM-301">Apart-Single (RM-301)</option>
+                                <option value="RM-302">Apart-Double (RM-302)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingCheckIn">Check-In Date</label>
+                            <input type="date" id="bookingCheckIn" name="bookingCheckIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingCheckOut">Check-Out Date</label>
+                            <input type="date" id="bookingCheckOut" name="bookingCheckOut" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingAdults">Adults</label>
+                        <input type="number" id="bookingAdults" name="bookingAdults" min="1" max="4" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingChildren">Children</label>
+                        <input type="number" id="bookingChildren" name="bookingChildren" min="0" max="4" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingStatus">Status</label>
+                        <select id="bookingStatus" name="bookingStatus" required>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="cancelled">Cancelled</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingRequests">Special Requests</label>
+                        <textarea id="bookingRequests" name="bookingRequests" rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="cancelEditBookingBtn">Cancel</button>
+                        <button type="submit" class="btn-save">Save Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bookings.js"></script>
+</body>
+</html>

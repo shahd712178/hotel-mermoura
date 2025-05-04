@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mermoura - Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sittings.css">
+    <link rel="icon" href="../images/Logo.jfif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" >
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../images/Logo.jfif" alt="Hotel Mermoura Logo" class="logo">
+                <h2>Hotel Mermoura</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rooms.html">
+                            <i class="fas fa-bed"></i>
+                            <span>Rooms Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clients.html">
+                            <i class="fas fa-users"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-navbar" id="top-navbar">
+                <div class="navbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="settings">Settings</h1>
+                </div>
+                <div class="navbar-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="ri-user-fill"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="content-wrapper">
+                <div class="settings-container">
+                    <!-- Settings Navigation -->
+                    <div class="settings-nav">
+                        <ul>
+                            <li id="active" data-tab="general-settings"><i class="fas fa-cog"></i> General</li>
+                            <li id="room-settings" data-tab="room-settings"><i class="fas fa-bed"></i> Room Settings</li>
+                            <li id="booking-settings" data-tab="booking-settings"><i class="fas fa-calendar-alt"></i> Booking Rules</li>
+                            <li id="payment-settings" data-tab="payment-settings"><i class="fas fa-credit-card"></i> Payments</li>
+                            <li id="email-settings" data-tab="email-settings"><i class="fas fa-envelope"></i> Email Templates</li>
+                            <li id="user-settings" data-tab="user-settings"><i class="fas fa-user-shield"></i> User Accounts</li>
+                            <li id="Maintenance" data-tab="maintenance"><i class="fas fa-tools"></i> Maintenance</li>
+                        </ul>
+                        
+                    </div>
+
+                    <!-- Settings Content Tabs -->
+                    <div class="settings-content">
+                        <!-- General Settings Tab -->
+                        <div class="settings-tab active" id="general-settings">
+                            <h2><i class="fas fa-cog"></i> General Settings</h2>
+                            <form id="generalSettingsForm">
+                                <div class="form-group">
+                                    <label for="hotelName">Hotel Name</label>
+                                    <input type="text" id="hotelName" name="hotelName" value="Hotel Mermoura">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contactEmail">Contact Email</label>
+                                        <input type="email" id="contactEmail" name="contactEmail" value="contact@hotelmermoura.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactPhone">Contact Phone</label>
+                                        <input type="tel" id="contactPhone" name="contactPhone" value="+213 661 32 23 73">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="hotelAddress">Address</label>
+                                    <textarea id="hotelAddress" name="hotelAddress" rows="2">1, Ali Chorfi Avenue. Guelma. Algeria</textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="hotelDescription">Description</label>
+                                    <textarea id="hotelDescription" name="hotelDescription" rows="4">Hotel Mermoura, located in the heart of the historic city of Guelma, combines comfort and tradition. This business and leisure hotel is ideally situated near tourist attractions and business centers in the region.</textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="timezone">Timezone</label>
+                                    <select id="timezone" name="timezone">
+                                        <option value="Africa/Algiers" selected>Africa/Algiers (GMT+1)</option>
+                                        <option value="UTC">UTC</option>
+                                        <!-- More timezones would be added here -->
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="logoUpload">Hotel Logo</label>
+                                    <div class="file-upload">
+                                        <img src="../images/Logo.jfif" alt="Current Logo" class="current-logo">
+                                        <input type="file" id="logoUpload" name="logoUpload" accept="image/*">
+                                        <label for="logoUpload" class="btn-upload">Change Logo</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="reset" class="btn-cancel">Reset Changes</button>
+                                    <button type="submit" class="btn-save">Save Settings</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Room Settings Tab -->
+                        <div id="room-settings-section" style="margin-top: 200px;">Section: Room Settings</div>
+                        <div class="settings-tab" id="room-settings">
+                            <h2><i class="fas fa-bed"></i> Room Settings</h2>
+                            <form id="roomSettingsForm">
+                                <div class="form-group">
+                                    <label for="defaultCheckIn">Default Check-In Time</label>
+                                    <input type="time" id="defaultCheckIn" name="defaultCheckIn" value="14:00">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="defaultCheckOut">Default Check-Out Time</label>
+                                    <input type="time" id="defaultCheckOut" name="defaultCheckOut" value="12:00">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="maxOccupancy">Maximum Occupancy per Room</label>
+                                    <input type="number" id="maxOccupancy" name="maxOccupancy" min="1" max="10" value="4">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="roomCategories">Room Categories</label>
+                                    <div class="multi-select">
+                                        <div class="selected-options">
+                                            <span class="option-tag">Single <i class="fas fa-times"></i></span>
+                                            <span class="option-tag">Double <i class="fas fa-times"></i></span>
+                                            <span class="option-tag">Suite <i class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="add-option">
+                                            <input type="text" placeholder="Add new category">
+                                            <button type="button" class="btn-add">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="amenities">Default Amenities</label>
+                                    <div class="checkbox-group">
+                                        <label><input type="checkbox" name="amenities" value="wifi" checked> Wi-Fi</label>
+                                        <label><input type="checkbox" name="amenities" value="breakfast" checked> Breakfast</label>
+                                        <label><input type="checkbox" name="amenities" value="tv"> TV</label>
+                                        <label><input type="checkbox" name="amenities" value="ac" checked> Air Conditioning</label>
+                                        <label><input type="checkbox" name="amenities" value="safe"> Safe</label>
+                                        <label><input type="checkbox" name="amenities" value="minibar"> Mini Bar</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="reset" class="btn-cancel">Reset Changes</button>
+                                    <button type="submit" class="btn-save">Save Settings</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Booking Settings Tab -->
+                        <div id="booking-settings-section" style="margin-top: 200px;">Section: Booking Settings</div>
+                        <div class="settings-tab" id="booking-settings">
+                            <h2><i class="fas fa-calendar-alt"></i> Booking Rules</h2>
+                            <form id="bookingSettingsForm">
+                                <div class="form-group">
+                                    <label for="minStay">Minimum Stay (nights)</label>
+                                    <input type="number" id="minStay" name="minStay" min="1" value="1">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="maxStay">Maximum Stay (nights)</label>
+                                    <input type="number" id="maxStay" name="maxStay" min="1" value="30">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="advanceBooking">Maximum Advance Booking (days)</label>
+                                    <input type="number" id="advanceBooking" name="advanceBooking" min="1" value="365">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cancellationPolicy">Cancellation Policy</label>
+                                    <select id="cancellationPolicy" name="cancellationPolicy">
+                                        <option value="flexible">Flexible (Full refund 24h before)</option>
+                                        <option value="moderate">Moderate (Full refund 7 days before)</option>
+                                        <option value="strict" selected>Strict (50% refund up to 14 days before)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="depositRequired">Deposit Required</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="depositRequired" value="yes" checked> Yes</label>
+                                        <label><input type="radio" name="depositRequired" value="no"> No</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group" id="depositAmountGroup">
+                                    <label for="depositAmount">Deposit Amount (%)</label>
+                                    <input type="number" id="depositAmount" name="depositAmount" min="0" max="100" value="30">
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="reset" class="btn-cancel">Reset Changes</button>
+                                    <button type="submit" class="btn-save">Save Settings</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Payment Settings Tab -->
+                        <div id="payment-settings-section" style="margin-top: 200px;">Section: Payment Settings</div>
+                        <div class="settings-tab" id="payment-settings">
+                            <h2><i class="fas fa-credit-card"></i> Payment Settings</h2>
+                            <form id="paymentSettingsForm">
+                                <div class="form-group">
+                                    <label for="currency">Currency</label>
+                                    <select id="currency" name="currency">
+                                        <option value="DZD" selected>Algerian Dinar (DZD)</option>
+                                        <option value="USD">US Dollar (USD)</option>
+                                        <option value="EUR">Euro (EUR)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="taxRate">Tax Rate (%)</label>
+                                    <input type="number" id="taxRate" name="taxRate" min="0" max="50" step="0.1" value="7.00">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="serviceCharge">Service Charge (%)</label>
+                                    <input type="number" id="serviceCharge" name="serviceCharge" min="0" max="20" step="0.1" value="5.00">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Payment Methods</label>
+                                    <div class="checkbox-group">
+                                        <label><input type="checkbox" name="paymentMethods" value="cash" checked> Cash</label>
+                                        <label><input type="checkbox" name="paymentMethods" value="credit" checked> Credit Card</label>
+                                        <label><input type="checkbox" name="paymentMethods" value="bank"> Bank Transfer</label>
+                                        <label><input type="checkbox" name="paymentMethods" value="mobile"> Mobile Payment</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-gateways">
+                                    <h3>Payment Gateways</h3>
+                                    <div class="gateway">
+                                        <h4><i class="fab fa-cc-paypal"></i> PayPal</h4>
+                                        <div class="form-group">
+                                            <label><input type="checkbox" name="paypalEnabled"> Enable PayPal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="paypalEmail">PayPal Email</label>
+                                            <input type="email" id="paypalEmail" name="paypalEmail" placeholder="merchant@example.com">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="gateway">
+                                        <h4><i class="fab fa-cc-stripe"></i> Stripe</h4>
+                                        <div class="form-group">
+                                            <label><input type="checkbox" name="stripeEnabled"> Enable Stripe</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="stripeKey">Publishable Key</label>
+                                            <input type="text" id="stripeKey" name="stripeKey" placeholder="pk_test_...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="stripeSecret">Secret Key</label>
+                                            <input type="password" id="stripeSecret" name="stripeSecret" placeholder="sk_test_...">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="reset" class="btn-cancel">Reset Changes</button>
+                                    <button type="submit" class="btn-save">Save Settings</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Email Settings Tab -->
+                        <div id="email-settings-section" style="margin-top: 200px;">Section: Email Settings</div>
+                        <div class="settings-tab" id="email-settings">
+                            <h2><i class="fas fa-envelope"></i> Email Templates</h2>
+                            <div class="email-templates">
+                                <div class="template-nav">
+                                    <ul>
+                                        <li class="active" data-template="booking-confirmation">Booking Confirmation</li>
+                                        <li data-template="payment-received">Payment Received</li>
+                                        <li data-template="checkin-reminder">Check-in Reminder</li>
+                                        <li data-template="checkout-reminder">Checkout Reminder</li>
+                                        <li data-template="cancellation">Cancellation</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="template-content">
+                                    <div class="template-preview active" id="booking-confirmation">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="confirmSubject">Subject</label>
+                                                <input type="text" id="confirmSubject" value="Your booking at Hotel Mermoura is confirmed!">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="confirmContent">Content</label>
+                                                <textarea id="confirmContent" rows="10">
+Dear {guest_name},
+
+Thank you for your booking at Hotel Mermoura!
+
+Booking Details:
+- Check-in: {checkin_date}
+- Check-out: {checkout_date}
+- Room Type: {room_type}
+- Total Amount: {total_amount}
+
+If you have any special requests, please reply to this email.
+
+We look forward to welcoming you!
+
+Best regards,
+Hotel Mermoura Team
+                                                </textarea>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label><input type="checkbox" checked> Send copy to admin</label>
+                                            </div>
+                                            
+                                            <div class="form-actions">
+                                                <button type="button" class="btn-preview">Preview Email</button>
+                                                <button type="submit" class="btn-save">Save Template</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                    <!-- Other templates would be here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- User Accounts Tab -->
+                        <div id="user-settings-section" style="margin-top: 200px;">Section: User Settings</div>
+                        <div class="settings-tab" id="user-settings">
+                            <h2><i class="fas fa-user-shield"></i> User Accounts</h2>
+                            <div class="user-management">
+                                <div class="users-list">
+                                    <div class="user-header">
+                                        <h3>Staff Accounts</h3>
+                                        <button class="btn-add-user"><i class="fas fa-plus"></i> Add User</button>
+                                    </div>
+                                    
+                                    <table class="users-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Role</th>
+                                                <th>Last Login</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="user-avatar">
+                                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Admin">
+                                                        <span>Admin User</span>
+                                                    </div>
+                                                </td>
+                                                <td>admin@hotelmermoura.com</td>
+                                                <td><span class="role admin">Administrator</span></td>
+                                                <td>Today, 09:45</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="user-avatar">
+                                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Manager">
+                                                        <span>Manager User</span>
+                                                    </div>
+                                                </td>
+                                                <td>manager@hotelmermoura.com</td>
+                                                <td><span class="role manager">Manager</span></td>
+                                                <td>Yesterday, 14:30</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="user-avatar">
+                                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Reception">
+                                                        <span>Reception User</span>
+                                                    </div>
+                                                </td>
+                                                <td>reception@hotelmermoura.com</td>
+                                                <td><span class="role staff">Reception</span></td>
+                                                <td>Nov 15, 08:20</td>
+                                                <td><span class="status inactive">Inactive</span></td>
+                                                <td>
+                                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="user-form">
+                                    <h3>Add/Edit User</h3>
+                                    <form id="userAccountForm">
+                                        <div class="form-group">
+                                            <label for="userAvatar">Profile Picture</label>
+                                            <div class="avatar-upload">
+                                                <img src="https://via.placeholder.com/150" alt="User Avatar" id="userAvatarPreview">
+                                                <input type="file" id="userAvatar" accept="image/*">
+                                                <label for="userAvatar">Choose Image</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="userFirstName">First Name</label>
+                                                <input type="text" id="userFirstName" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="userLastName">Last Name</label>
+                                                <input type="text" id="userLastName" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="userEmail">Email</label>
+                                            <input type="email" id="userEmail" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="userRole">Role</label>
+                                            <select id="userRole" required>
+                                                <option value="">Select Role</option>
+                                                <option value="admin">Administrator</option>
+                                                <option value="manager">Manager</option>
+                                                <option value="reception">Reception</option>
+                                                <option value="housekeeping">Housekeeping</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="userPassword">Password</label>
+                                            <input type="password" id="userPassword" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="userStatus">Status</label>
+                                            <div class="radio-group">
+                                                <label><input type="radio" name="userStatus" value="active" checked> Active</label>
+                                                <label><input type="radio" name="userStatus" value="inactive"> Inactive</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="reset" class="btn-cancel">Cancel</button>
+                                            <button type="submit" class="btn-save">Save User</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Maintenance Tab -->
+                        <div id="maintenance-section" style="margin-top: 200px;">Section: Maintenance</div>
+                        <div class="settings-tab" id="maintenance">
+                            <h2><i class="fas fa-tools"></i> Maintenance</h2>
+                            <div class="maintenance-options">
+                                <div class="maintenance-card backup">
+                                    <h3><i class="fas fa-database"></i> Database Backup</h3>
+                                    <p>Create a complete backup of your system data</p>
+                                    <div class="backup-options">
+                                        <button class="btn-backup-now"><i class="fas fa-save"></i> Backup Now</button>
+                                        <div class="auto-backup">
+                                            <label><input type="checkbox" checked> Auto-backup daily</label>
+                                        </div>
+                                    </div>
+                                    <div class="backup-history">
+                                        <h4>Recent Backups</h4>
+                                        <ul>
+                                            <li>
+                                                <span>backup_20231120.zip</span>
+                                                <span>Nov 20, 2023 02:00</span>
+                                                <button class="btn-download"><i class="fas fa-download"></i></button>
+                                            </li>
+                                            <li>
+                                                <span>backup_20231119.zip</span>
+                                                <span>Nov 19, 2023 02:00</span>
+                                                <button class="btn-download"><i class="fas fa-download"></i></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="maintenance-card system">
+                                    <h3><i class="fas fa-server"></i> System Information</h3>
+                                    <div class="system-info">
+                                        <div class="info-item">
+                                            <span class="label">System Version:</span>
+                                            <span class="value">1.5.2</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="label">Last Updated:</span>
+                                            <span class="value">Nov 15, 2023</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="label">Database Size:</span>
+                                            <span class="value">45.7 MB</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="label">Server Status:</span>
+                                            <span class="value status-good">All Systems Operational</span>
+                                        </div>
+                                    </div>
+                                    <div class="update-check">
+                                        <button class="btn-check-updates"><i class="fas fa-sync-alt"></i> Check for Updates</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="maintenance-card cache">
+                                    <h3><i class="fas fa-broom"></i> System Maintenance</h3>
+                                    <div class="cache-options">
+                                        <button class="btn-clear-cache"><i class="fas fa-trash"></i> Clear Cache</button>
+                                        <button class="btn-optimize-db"><i class="fas fa-magic"></i> Optimize Database</button>
+                                    </div>
+                                    <div class="reset-options">
+                                        <h4>Reset Options</h4>
+                                        <button class="btn-reset-settings"><i class="fas fa-undo"></i> Reset to Default Settings</button>
+                                        <button class="btn-system-reset"><i class="fas fa-exclamation-triangle"></i> Full System Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit User Modal -->
+    <div class="modal" id="userModal">
+        <!-- Modal content would be here -->
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

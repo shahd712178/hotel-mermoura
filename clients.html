@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mermoura - Clients Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clients.css">
+    <link rel="icon" href="images/Logo.jfif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" >
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/Logo.jfif" alt="Hotel Mermoura Logo" class="logo">
+                <h2>Hotel Mermoura</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rooms.html">
+                            <i class="fas fa-bed"></i>
+                            <span>Rooms Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="clients.html">
+                            <i class="fas fa-users"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Clients Management</h1>
+                </div>
+                <div class="navbar-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="ri-user-fill"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Clients Content -->
+            <div class="content-wrapper">
+                <!-- Clients Header with Search and Add Button -->
+                <div class="clients-header">
+                    <h2>All Clients</h2>
+                    <div class="clients-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search clients..." id="clientSearch">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <button class="btn-add-client" id="addClientBtn">
+                            <i class="fas fa-plus"></i> Add Client
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Clients Table -->
+                <div class="clients-table-container">
+                    <table class="clients-table">
+                        <thead>
+                            <tr>
+                                <th>Client ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Country</th>
+                                <th>Bookings</th>
+                                <th>Last Stay</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CL-1001</td>
+                                <td>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="client-avatar">
+                                        <span>John Doe</span>
+                                    </div>
+                                </td>
+                                <td>john.doe@example.com</td>
+                                <td>+213 661 32 23 73</td>
+                                <td>Algeria</td>
+                                <td>5</td>
+                                <td>2023-11-18</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#CL-1002</td>
+                                <td>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith" class="client-avatar">
+                                        <span>Jane Smith</span>
+                                    </div>
+                                </td>
+                                <td>jane.smith@example.com</td>
+                                <td>+213 550 12 34 56</td>
+                                <td>France</td>
+                                <td>3</td>
+                                <td>2023-10-25</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#CL-1003</td>
+                                <td>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Robert Johnson" class="client-avatar">
+                                        <span>Robert Johnson</span>
+                                    </div>
+                                </td>
+                                <td>robert.j@example.com</td>
+                                <td>+213 770 98 76 54</td>
+                                <td>USA</td>
+                                <td>2</td>
+                                <td>2023-11-12</td>
+                                <td><span class="status inactive">Inactive</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#CL-1004</td>
+                                <td>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Sarah Williams" class="client-avatar">
+                                        <span>Sarah Williams</span>
+                                    </div>
+                                </td>
+                                <td>sarah.w@example.com</td>
+                                <td>+213 560 11 22 33</td>
+                                <td>UK</td>
+                                <td>7</td>
+                                <td>2023-12-10</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#CL-1005</td>
+                                <td>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Michael Brown" class="client-avatar">
+                                        <span>Michael Brown</span>
+                                    </div>
+                                </td>
+                                <td>michael.b@example.com</td>
+                                <td>+213 790 55 66 77</td>
+                                <td>Germany</td>
+                                <td>4</td>
+                                <td>2023-09-20</td>
+                                <td><span class="status active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="btn-pagination" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn-pagination active">1</button>
+                    <button class="btn-pagination">2</button>
+                    <button class="btn-pagination">3</button>
+                    <button class="btn-pagination">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Client Modal -->
+    <div class="modal" id="clientModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="clientModalTitle">Add New Client</h3>
+                <button class="modal-close" id="closeClientModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="clientForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientFirstName">First Name</label>
+                            <input type="text" id="clientFirstName" name="clientFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientLastName">Last Name</label>
+                            <input type="text" id="clientLastName" name="clientLastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientEmail">Email</label>
+                            <input type="email" id="clientEmail" name="clientEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Phone</label>
+                            <input type="tel" id="clientPhone" name="clientPhone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientCountry">Country</label>
+                            <select id="clientCountry" name="clientCountry" required>
+                                <option value="">Select Country</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="France">France</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientStatus">Status</label>
+                            <select id="clientStatus" name="clientStatus" required>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="vip">VIP</option>
+                                <option value="blacklisted">Blacklisted</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientAddress">Address</label>
+                        <textarea id="clientAddress" name="clientAddress" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientNotes">Notes</label>
+                        <textarea id="clientNotes" name="clientNotes" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientAvatar">Profile Photo</label>
+                        <input type="file" id="clientAvatar" name="clientAvatar" accept="image/*">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="cancelClientBtn">Cancel</button>
+                        <button type="submit" class="btn-save">Save Client</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Details Modal -->
+    <div class="modal" id="clientDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Client Details</h3>
+                <button class="modal-close" id="closeClientDetailsModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="client-profile-header">
+                    <div class="client-avatar-large">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" id="detailClientAvatar">
+                    </div>
+                    <div class="client-name-status">
+                        <h2 id="detailClientName">John Doe</h2>
+                        <span class="status active" id="detailClientStatus">Active</span>
+                    </div>
+                </div>
+                
+                <div class="client-details-grid">
+                    <div class="detail-card">
+                        <h4>Contact Information</h4>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-envelope"></i> Email:</span>
+                            <span class="detail-value" id="detailClientEmail">john.doe@example.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-phone"></i> Phone:</span>
+                            <span class="detail-value" id="detailClientPhone">+213 661 32 23 73</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-map-marker-alt"></i> Address:</span>
+                            <span class="detail-value" id="detailClientAddress">123 Main St, Guelma, Algeria</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-globe"></i> Country:</span>
+                            <span class="detail-value" id="detailClientCountry">Algeria</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h4>Booking Statistics</h4>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-calendar-check"></i> Total Bookings:</span>
+                            <span class="detail-value" id="detailClientBookings">5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-moon"></i> Total Nights:</span>
+                            <span class="detail-value" id="detailClientNights">18</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-money-bill-wave"></i> Total Spent:</span>
+                            <span class="detail-value" id="detailClientSpent">374,500 DZD</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label"><i class="fas fa-clock"></i> Last Stay:</span>
+                            <span class="detail-value" id="detailClientLastStay">2023-11-15 to 2023-11-18</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="client-notes">
+                    <h4>Notes</h4>
+                    <p id="detailClientNotes">Preferred room: Junior-Single. Always requests early check-in.</p>
+                </div>
+                
+                <div class="client-actions">
+                    <button class="btn-edit-client" id="editClientFromDetailsBtn">Edit Client</button>
+                    <button class="btn-send-email" id="sendEmailBtn"><i class="fas fa-envelope"></i> Send Email</button>
+                    <button class="btn-view-bookings" id="viewClientBookingsBtn"><i class="fas fa-calendar-alt"></i> View Bookings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/clients.js"></script>
+</body>
+</html>
