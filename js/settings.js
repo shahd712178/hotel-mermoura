@@ -149,7 +149,8 @@ window.onload = function () {
         { buttonId: 'payment-settings', sectionId: 'payment-settings-section' },
         { buttonId: 'email-settings', sectionId: 'email-settings-section' },
         { buttonId: 'user-settings', sectionId: 'user-settings-section' },
-        { buttonId: 'Maintenance', sectionId: 'maintenance-section' }
+        { buttonId: 'Maintenance', sectionId: 'maintenance-section' },
+        { buttonId: '#setings', sectionId: 'top-navbar' }
     ];
 
     links.forEach(link => {

@@ -1,0 +1,108 @@
+/* Compact Centered Form CSS */
+.user-form {
+    width: 350px;  /* Reduced width */
+    margin: 30px auto;  /* Centered */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;  /* Smaller font size */
+}
+
+.user-form h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Avatar Upload - Compact */
+.avatar-upload {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#userAvatarPreview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.avatar-upload label {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Form Rows - Side by Side */
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Input Styles - Compact */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Radio Buttons - Compact */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Buttons - Compact */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-cancel,
+.btn-save {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.btn-cancel {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.btn-save {
+    background: #4CAF50;
+    color: white;
+    border: none;
+}

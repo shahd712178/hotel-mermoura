@@ -44,12 +44,7 @@
                             <span>Clients</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="messages.html">
-                            <i class="fas fa-envelope"></i>
-                            <span>Messages</span>
-                        </a>
-                    </li>
+                    
                     <li class="active">
                         <a href="settings.html">
                             <i class="fas fa-cog"></i>
@@ -313,20 +308,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="gateway">
-                                        <h4><i class="fab fa-cc-stripe"></i> Stripe</h4>
-                                        <div class="form-group">
-                                            <label><input type="checkbox" name="stripeEnabled"> Enable Stripe</label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="stripeKey">Publishable Key</label>
-                                            <input type="text" id="stripeKey" name="stripeKey" placeholder="pk_test_...">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="stripeSecret">Secret Key</label>
-                                            <input type="password" id="stripeSecret" name="stripeSecret" placeholder="sk_test_...">
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 
                                 <div class="form-actions">
@@ -404,16 +386,14 @@ Hotel Mermoura Team
                             <div class="user-management">
                                 <div class="users-list">
                                     <div class="user-header">
-                                        <h3>Staff Accounts</h3>
-                                        <button class="btn-add-user"><i class="fas fa-plus"></i> Add User</button>
+                                        
+                                        
                                     </div>
                                     
                                     <table class="users-table">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Role</th>
+                                                <th>Name</th>                                           
                                                 <th>Last Login</th>
                                                 <th>Status</th>
                                                 <th>Actions</th>
@@ -427,8 +407,6 @@ Hotel Mermoura Team
                                                         <span>Admin User</span>
                                                     </div>
                                                 </td>
-                                                <td>admin@hotelmermoura.com</td>
-                                                <td><span class="role admin">Administrator</span></td>
                                                 <td>Today, 09:45</td>
                                                 <td><span class="status active">Active</span></td>
                                                 <td>
@@ -436,101 +414,12 @@ Hotel Mermoura Team
                                                     <button class="btn-delete"><i class="fas fa-trash"></i></button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="user-avatar">
-                                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Manager">
-                                                        <span>Manager User</span>
-                                                    </div>
-                                                </td>
-                                                <td>manager@hotelmermoura.com</td>
-                                                <td><span class="role manager">Manager</span></td>
-                                                <td>Yesterday, 14:30</td>
-                                                <td><span class="status active">Active</span></td>
-                                                <td>
-                                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="user-avatar">
-                                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Reception">
-                                                        <span>Reception User</span>
-                                                    </div>
-                                                </td>
-                                                <td>reception@hotelmermoura.com</td>
-                                                <td><span class="role staff">Reception</span></td>
-                                                <td>Nov 15, 08:20</td>
-                                                <td><span class="status inactive">Inactive</span></td>
-                                                <td>
-                                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
                                 
-                                <div class="user-form">
-                                    <h3>Add/Edit User</h3>
-                                    <form id="userAccountForm">
-                                        <div class="form-group">
-                                            <label for="userAvatar">Profile Picture</label>
-                                            <div class="avatar-upload">
-                                                <img src="https://via.placeholder.com/150" alt="User Avatar" id="userAvatarPreview">
-                                                <input type="file" id="userAvatar" accept="image/*">
-                                                <label for="userAvatar">Choose Image</label>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-row">
-                                            <div class="form-group">
-                                                <label for="userFirstName">First Name</label>
-                                                <input type="text" id="userFirstName" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="userLastName">Last Name</label>
-                                                <input type="text" id="userLastName" required>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label for="userEmail">Email</label>
-                                            <input type="email" id="userEmail" required>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label for="userRole">Role</label>
-                                            <select id="userRole" required>
-                                                <option value="">Select Role</option>
-                                                <option value="admin">Administrator</option>
-                                                <option value="manager">Manager</option>
-                                                <option value="reception">Reception</option>
-                                                <option value="housekeeping">Housekeeping</option>
-                                            </select>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label for="userPassword">Password</label>
-                                            <input type="password" id="userPassword" required>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label for="userStatus">Status</label>
-                                            <div class="radio-group">
-                                                <label><input type="radio" name="userStatus" value="active" checked> Active</label>
-                                                <label><input type="radio" name="userStatus" value="inactive"> Inactive</label>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-actions">
-                                            <button type="reset" class="btn-cancel">Cancel</button>
-                                            <button type="submit" class="btn-save">Save User</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                                
                         </div>
 
                         <!-- Maintenance Tab -->

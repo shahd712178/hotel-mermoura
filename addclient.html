@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Guest Information - Hotel Mermoura</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Accueil.css">
+        <link rel="stylesheet" href="book.css">
+        <link rel="stylesheet" href="/css/addclient.css">
+        <link rel="stylesheet" href="/js/addclient.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" >
+    </head>
+    <body>
+      
+                                    <!-- content-->
+        <div class="booking-page">
+        <h2>Add client</h2>
+       
+        <div class="reservation-form">
+            <form id="clientForm" action="book.php" method="POST">
+                <h2>Booking Form</h2>
+                <div class="form-group">
+                    <label for="arrival">Arrival</label>
+                    <input type="date" id="arrival" required>
+                </div>
+                <div class="form-group">
+                    <label for="departure">Departure</label>
+                    <input type="date" id="departure" required>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Room type</label>
+                    <select id="room-type" required>
+                        <option value="">-- Select --</option>
+                        <optgroup label="Rooms">
+                            <option value="Single">Single</option>
+                            <option value="Double">Double</option>
+                            <option value="Junior-Single">Junior-Single</option>
+                            <option value="Junior-Double">Junior-Double</option>
+                            <option value="Apart-Single">Apart-Single</option>
+                            <option value="Apart-Double">Apart-Double</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of guests</label>
+                    <select id="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </form>
+            <form id="clientForm" action="book.php" method="POST">
+                <h2></h2>
+                
+                <div class="booking-summary">
+                    <h3>Client informations:</h3>
+                    <div id="bookingDetails"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="payment-options">
+                    <div>
+                        <input id="hotel" type="radio" name="payment" value="hotel" checked />
+                        <label for="hotel">Payment at the hotel</label>
+                    
+                        <input id="online" type="radio" name="payment" value="online" checked />
+                        <label for="online">Payment online</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Confirm Reservation</button>
+            </form>
+        </div>
+        </div>
+
+                                  
+    </body>
+</html>    
