@@ -29,7 +29,7 @@ body {
     gap: 30px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(221, 8, 8, 0.1);
     padding: 30px;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 .reservation-form h2 {
-    color: #b52222;
+    color: #1b1919;
     margin-bottom: 20px;
     font-size: 22px;
     text-align: left;
@@ -53,14 +53,14 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #555;
+    color: #121111;
 }
 
 .form-group input,
 .form-group select {
     width: 50%;
     padding: 12px 15px;
-    border: 2px solid #ddd;
+    border: 2px solid #131111;
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s;
@@ -90,7 +90,7 @@ body {
 
 .booking-summary h3 {
     margin-top: 0;
-    color: #2c3e50;
+    color: #090909;
     font-size: 18px;
 }
 

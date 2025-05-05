@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clients.css">
+    <link rel="stylesheet" href="css/addclient.css">
+    <link rel="stylesheet" href="js/addclient.js">
     <link rel="icon" href="images/Logo.jfif">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" >
 </head>
@@ -94,7 +96,7 @@
                             <input type="text" placeholder="Search clients..." id="clientSearch">
                             <i class="fas fa-search"></i>
                         </div>
-                        <button class="btn-add-client" id="addClientBtn">
+                        <button class="btn-add-client" id="addClientBtn" window.location.href="/addclient.html">
                             <i class="fas fa-plus"></i> Add Client
                         </button>
                     </div>
@@ -132,86 +134,11 @@
                                 <td>2023-11-18</td>
                                 <td><span class="status active">Active</span></td>
                                 <td class="actions">
-                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    
                                     <button class="btn-delete"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>#CL-1002</td>
-                                <td>
-                                    <div class="client-info">
-                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith" class="client-avatar">
-                                        <span>Jane Smith</span>
-                                    </div>
-                                </td>
-                                <td>jane.smith@example.com</td>
-                                <td>+213 550 12 34 56</td>
-                                <td>France</td>
-                                <td>3</td>
-                                <td>2023-10-25</td>
-                                <td><span class="status active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#CL-1003</td>
-                                <td>
-                                    <div class="client-info">
-                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Robert Johnson" class="client-avatar">
-                                        <span>Robert Johnson</span>
-                                    </div>
-                                </td>
-                                <td>robert.j@example.com</td>
-                                <td>+213 770 98 76 54</td>
-                                <td>USA</td>
-                                <td>2</td>
-                                <td>2023-11-12</td>
-                                <td><span class="status inactive">Inactive</span></td>
-                                <td class="actions">
-                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#CL-1004</td>
-                                <td>
-                                    <div class="client-info">
-                                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Sarah Williams" class="client-avatar">
-                                        <span>Sarah Williams</span>
-                                    </div>
-                                </td>
-                                <td>sarah.w@example.com</td>
-                                <td>+213 560 11 22 33</td>
-                                <td>UK</td>
-                                <td>7</td>
-                                <td>2023-12-10</td>
-                                <td><span class="status active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#CL-1005</td>
-                                <td>
-                                    <div class="client-info">
-                                        <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Michael Brown" class="client-avatar">
-                                        <span>Michael Brown</span>
-                                    </div>
-                                </td>
-                                <td>michael.b@example.com</td>
-                                <td>+213 790 55 66 77</td>
-                                <td>Germany</td>
-                                <td>4</td>
-                                <td>2023-09-20</td>
-                                <td><span class="status active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>

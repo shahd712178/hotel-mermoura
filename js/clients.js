@@ -212,4 +212,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-});
+});const btn2 = document.querySelector('addclient');
+  
+if (btn2) {
+  btn2.onclick = function () {
+    window.location.href = 'client.html';
+  };
+}
